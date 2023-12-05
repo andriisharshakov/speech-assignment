@@ -6,6 +6,7 @@ builder.Services.AddControllers();
 
 // Load configuration from appsettings.json
 var configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json")
     .Build();
 
