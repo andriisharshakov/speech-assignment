@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 [Route("api/[controller]")]
 public class DepartmentsController : ControllerBase
 {
-    private readonly DepartmentService _departmentService;
+    private readonly IDepartmentService _departmentService;
 
-    public DepartmentsController(DepartmentService departmentService)
+    public DepartmentsController(IDepartmentService departmentService)
     {
         _departmentService = departmentService;
     }
